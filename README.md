@@ -18,4 +18,15 @@ rpm-ostree install \
   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
   ;
 
+rpm-ostree install \
+  akmod-nvidia \
+  smplayer \
+  xorg-x11-drv-nvidia-cuda \
+  ;
+
+rpm-ostree install \
+  emacs \
+  vim \
+  ;
+
 https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
