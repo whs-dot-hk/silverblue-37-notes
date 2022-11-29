@@ -48,3 +48,13 @@ https://accounts.google.com/
 https://github.com/
 
 https://www.youtube.com/
+
+rpm-ostree install \
+  libguestfs-tools \
+  libvirt-daemon-config-network \
+  libvirt-daemon-kvm \
+  qemu-kvm \
+  virt-install \
+  virt-manager \
+  virt-viewer \
+  ;
