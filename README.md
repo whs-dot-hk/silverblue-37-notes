@@ -60,3 +60,5 @@ rpm-ostree install \
   ;
 
 python -m ensurepip
+
+pip3 install ansible
