@@ -58,3 +58,5 @@ rpm-ostree install \
   virt-manager \
   virt-viewer \
   ;
+
+python -m ensurepip
