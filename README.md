@@ -12,8 +12,10 @@ flatpak remote-modify --enable flathub
 flatpak install -y flathub org.keepassxc.KeePassXC
 flatpak install -y flathub org.filezillaproject.Filezilla
 
+```sh
 git config --global user.email hswongac@gmail.com
 git config --global user.name whs
+```
 
 rpm-ostree install \
   https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
