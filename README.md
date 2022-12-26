@@ -3,20 +3,18 @@
 curl -OL https://github.com/borgbackup/borg/releases/download/1.2.2/borg-linux64
 sudo install borg-linux64 /usr/local/bin/borg
 ```
-
 ```sh
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-modify --enable flathub
 ```
-
+```sh
 flatpak install -y flathub org.keepassxc.KeePassXC
 flatpak install -y flathub org.filezillaproject.Filezilla
-
+```
 ```sh
 git config --global user.email hswongac@gmail.com
 git config --global user.name whs
 ```
-
 ```sh
 rpm-ostree install \
   https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
