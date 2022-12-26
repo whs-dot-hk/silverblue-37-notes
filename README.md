@@ -23,18 +23,19 @@ rpm-ostree install \
   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
   ;
 ```
-
+```sh
 rpm-ostree install \
   akmod-nvidia \
   smplayer \
   xorg-x11-drv-nvidia-cuda \
   ;
-
+```
+```sh
 rpm-ostree install \
   emacs \
   vim \
   ;
-
+```
 ```sh
 curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
 sh updater.sh -l
