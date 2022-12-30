@@ -45,12 +45,15 @@ sh updater.sh -l
 * https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
 
 about:preferences#privacy > Manage Exceptions
-
+```txt
 https://accounts.google.com/
-
+```
+```txt
 https://github.com/
-
+```
+```txt
 https://www.youtube.com/
+```
 
 rpm-ostree install \
   libguestfs-tools \
