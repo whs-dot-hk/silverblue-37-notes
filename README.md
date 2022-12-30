@@ -38,6 +38,7 @@ rpm-ostree install \
 curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
 sh updater.sh -l
 0
+y
 ```
 
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
