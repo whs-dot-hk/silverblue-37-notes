@@ -29,7 +29,11 @@ rpm-ostree install \
   ;
 ```
 ```sh
-rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1
+rpm-ostree kargs \
+  --append=modprobe.blacklist=nouveau \
+  --append=nvidia-drm.modeset=1 \
+  --append=rd.driver.blacklist=nouveau \
+  ;
 ```
 ```sh
 rpm-ostree install \
