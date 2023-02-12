@@ -29,6 +29,9 @@ rpm-ostree install \
   ;
 ```
 ```sh
+sudo rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1
+```
+```sh
 rpm-ostree install \
   emacs \
   vim \
