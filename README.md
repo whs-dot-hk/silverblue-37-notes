@@ -1,11 +1,12 @@
 # Install borg
+https://github.com/borgbackup/borg
 ```sh
-curl -OL https://github.com/borgbackup/borg/releases/download/1.2.2/borg-linux64
+curl -OL https://github.com/borgbackup/borg/releases/download/1.2.3/borg-linux64
 sudo install borg-linux64 /usr/local/bin/borg
 ```
 ```sh
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-modify --enable flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 ```sh
 flatpak install -y flathub org.keepassxc.KeePassXC
@@ -36,16 +37,13 @@ rpm-ostree kargs \
   ;
 ```
 ```sh
-rpm-ostree install \
-  emacs \
-  vim \
-  ;
+rpm-ostree install vim
 ```
 ```sh
 curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
 sh updater.sh -l
-0
-y
+# 0
+# y
 ```
 
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
@@ -62,7 +60,7 @@ https://github.com/
 ```txt
 https://www.youtube.com/
 ```
-
+```sh
 rpm-ostree install \
   libguestfs-tools \
   libvirt-daemon-config-network \
@@ -72,6 +70,7 @@ rpm-ostree install \
   virt-manager \
   virt-viewer \
   ;
+```
 
 python -m ensurepip
 
