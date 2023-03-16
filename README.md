@@ -3,6 +3,7 @@ https://github.com/borgbackup/borg
 ```sh
 curl -OL https://github.com/borgbackup/borg/releases/download/1.2.3/borg-linux64
 sudo install borg-linux64 /usr/local/bin/borg
+rm borg-linux64
 ```
 ```sh
 flatpak remote-modify --enable flathub
@@ -44,6 +45,9 @@ curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
 sh updater.sh -l
 # 0
 # y
+```
+```sh
+rm updater.sh
 ```
 
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
