@@ -37,6 +37,7 @@ rpm-ostree kargs \
   --append=rd.driver.blacklist=nouveau \
   ;
 ```
+# Install vim
 ```sh
 rpm-ostree install vim
 ```
