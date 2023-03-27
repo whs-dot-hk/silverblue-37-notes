@@ -5,13 +5,15 @@ curl -OL https://github.com/borgbackup/borg/releases/download/1.2.3/borg-linux64
 sudo install borg-linux64 /usr/local/bin/borg
 rm borg-linux64
 ```
+# Install flatpaks
 ```sh
 flatpak remote-modify --enable flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 ```sh
-flatpak install -y flathub org.keepassxc.KeePassXC
+flatpak install -y flathub com.gitlab.davem.ClamTk
 flatpak install -y flathub org.filezillaproject.Filezilla
+flatpak install -y flathub org.keepassxc.KeePassXC
 ```
 ```sh
 git config --global user.email hswongac@gmail.com
@@ -39,7 +41,10 @@ rpm-ostree kargs \
 ```
 # Install vim
 ```sh
-rpm-ostree install vim
+rpm-ostree install \
+  emacs \
+  vim \
+  ;
 ```
 ```sh
 curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
