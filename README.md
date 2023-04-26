@@ -92,3 +92,16 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 rpm-ostree install -y brasero
+
+# F38
+```sh
+rpm-ostree override remove \
+  libavcodec-free \
+  libavfilter-free \
+  libavformat-free \
+  libavutil-free \
+  libpostproc-free \
+  libswresample-free \
+  libswscale-free \
+  --install ffmpeg
+```
