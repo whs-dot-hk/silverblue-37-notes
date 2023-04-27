@@ -1,7 +1,7 @@
 # Install borg
 https://github.com/borgbackup/borg
 ```sh
-curl -OL https://github.com/borgbackup/borg/releases/download/1.2.3/borg-linux64
+curl -OL https://github.com/borgbackup/borg/releases/download/1.2.4/borg-linux64
 sudo install borg-linux64 /usr/local/bin/borg
 rm borg-linux64
 ```
@@ -51,6 +51,7 @@ curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
 sh updater.sh -l
 # 0
 # y
+rm updater.sh
 ```
 ```sh
 rm updater.sh
