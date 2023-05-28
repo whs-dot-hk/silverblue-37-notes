@@ -46,6 +46,10 @@ sudo mount --bind /var/nix /nix
 # /etc/fstab
 /var/nix /nix none bind 0 0
 ```
+```txt
+# ~/.config/nix/nix.conf
+experimental-features = nix-command flakes
+```
 # Install vim
 ```sh
 rpm-ostree install \
