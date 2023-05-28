@@ -50,13 +50,6 @@ sudo mount --bind /var/nix /nix
 # ~/.config/nix/nix.conf
 experimental-features = nix-command flakes
 ```
-# Install vim
-```sh
-rpm-ostree install \
-  emacs \
-  vim \
-  ;
-```
 ```sh
 curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
 sh updater.sh -l
