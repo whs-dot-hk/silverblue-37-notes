@@ -35,6 +35,17 @@ rpm-ostree kargs \
   --append=rd.driver.blacklist=nouveau \
   ;
 ```
+# Install nix
+```sh
+sudo chattr -i /
+sudo mkdir -p /nix
+sudo mkdir -p /var/nix
+sudo mount --bind /var/nix /nix
+```
+```txt
+# /etc/fstab
+/var/nix /nix none bind 0 0
+```
 # Install vim
 ```sh
 rpm-ostree install \
