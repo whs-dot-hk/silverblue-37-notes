@@ -36,6 +36,9 @@ rpm-ostree kargs \
 # Install nix
 ```sh
 sudo chattr -i /
+sudo mkdir -p /nix
+sudo mkdir -p /var/nix
+sudo chown -R whs /nix
 ```
 ```txt
 # ~/.config/nix/nix.conf
@@ -88,16 +91,3 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 rpm-ostree install -y brasero
-
-# F38
-```sh
-rpm-ostree override remove \
-  libavcodec-free \
-  libavfilter-free \
-  libavformat-free \
-  libavutil-free \
-  libpostproc-free \
-  libswresample-free \
-  libswscale-free \
-  --install ffmpeg
-```
