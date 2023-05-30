@@ -33,18 +33,6 @@ rpm-ostree kargs \
   --append=rd.driver.blacklist=nouveau \
   ;
 ```
-# Install nix
-```sh
-sudo chattr -i /
-sudo mkdir -p /nix
-sudo mkdir -p /var/nix
-sudo mount --bind /var/nix /nix
-sudo chown -R whs /nix
-```
-```txt
-# ~/.config/nix/nix.conf
-experimental-features = nix-command flakes
-```
 ```sh
 curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
 sh updater.sh -l
