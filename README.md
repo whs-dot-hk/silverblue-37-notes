@@ -38,6 +38,7 @@ rpm-ostree kargs \
 sudo chattr -i /
 sudo mkdir -p /nix
 sudo mkdir -p /var/nix
+sudo mount --bind /var/nix /nix
 sudo chown -R whs /nix
 ```
 ```txt
@@ -61,13 +62,13 @@ rm updater.sh
 
 about:preferences#privacy > Manage Exceptions
 ```txt
-https://accounts.google.com/
+https://accounts.google.com
 ```
 ```txt
-https://github.com/
+https://github.com
 ```
 ```txt
-https://www.youtube.com/
+https://www.youtube.com
 ```
 ```sh
 rpm-ostree install \
