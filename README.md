@@ -40,9 +40,6 @@ sh updater.sh -l
 # y
 rm updater.sh
 ```
-```sh
-rm updater.sh
-```
 
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
 * https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
