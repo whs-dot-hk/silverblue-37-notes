@@ -75,8 +75,10 @@ pip3 install borgmatic
 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
-
-rpm-ostree install -y brasero
+# Install brasero
+```sh
+rpm-ostree install brasero
+```
 # F38
 ```sh
 rpm-ostree override remove \
