@@ -19,6 +19,7 @@ rpm-ostree install \
   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
   ;
 ```
+# Install nvidia driver
 ```sh
 rpm-ostree install \
   akmod-nvidia \
@@ -33,6 +34,7 @@ rpm-ostree kargs \
   --append=rd.driver.blacklist=nouveau \
   ;
 ```
+# Install userjs
 ```sh
 curl -OL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
 sh updater.sh -l
@@ -40,7 +42,7 @@ sh updater.sh -l
 # y
 rm updater.sh
 ```
-
+# Install firefox addons
 * https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
 * https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
 * https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
@@ -55,6 +57,7 @@ https://github.com
 ```txt
 https://www.youtube.com
 ```
+# Install virt-manager
 ```sh
 rpm-ostree install \
   libguestfs-tools \
