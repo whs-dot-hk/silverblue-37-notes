@@ -69,7 +69,10 @@ rpm-ostree install \
   virt-viewer \
   ;
 ```
-
+```sh
+git config --global user.email hswongac@gmail.com
+git config --global user.name whs
+```
 python -m ensurepip
 
 pip3 install ansible
