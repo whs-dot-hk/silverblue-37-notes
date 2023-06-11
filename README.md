@@ -19,7 +19,7 @@ rpm-ostree install \
   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
   ;
 ```
-# Install nvidia driver
+# Install nvidia driver and smplayer
 ```sh
 rpm-ostree install \
   akmod-nvidia \
