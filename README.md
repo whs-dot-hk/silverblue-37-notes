@@ -76,7 +76,7 @@ git config --global user.name whs
 # Install packer
 ```sh
 curl -O https://releases.hashicorp.com/packer/1.9.1/packer_1.9.1_linux_amd64.zip
-sudo unzip  -d /usr/local/bin packer_*_linux_amd64.zip packer
+sudo unzip -d /usr/local/bin packer_*_linux_amd64.zip packer
 rm packer_*_linux_amd64.zip
 ```
 python -m ensurepip
