@@ -6,6 +6,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install -y flathub org.filezillaproject.Filezilla
 flatpak install -y flathub org.keepassxc.KeePassXC
 ```
+# Install rpmfusion
 ```sh
 rpm-ostree install \
   https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
