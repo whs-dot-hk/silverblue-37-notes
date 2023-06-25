@@ -71,10 +71,6 @@ rpm-ostree install \
   virt-viewer \
   ;
 ```
-```sh
-git config --global user.email hswongac@gmail.com
-git config --global user.name whs
-```
 # Install packer
 ```sh
 curl -O https://releases.hashicorp.com/packer/1.9.1/packer_1.9.1_linux_amd64.zip
