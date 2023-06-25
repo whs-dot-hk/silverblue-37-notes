@@ -1,3 +1,24 @@
+# Install nix
+```sh
+curl -OL https://github.com/nix-community/nix-user-chroot/releases/download/1.2.2/nix-user-chroot-bin-1.2.2-x86_64-unknown-linux-musl
+sudo install nix-user-chroot* /usr/local/bin/nix-user-chroot
+rm nix-user-chroot*
+```
+```sh
+mkdir -m 0755 ~/.nix
+nix-user-chroot ~/.nix bash -c "sh <(curl -L https://nixos.org/nix/install) --no-daemon"
+```
+```sh
+mkdir -p ~/.config/nix
+echo "experimental-features = nix-command flakes" > ~/.config/nix/nix.conf
+```
+```txt
+cat <<EOF>>~/.bashrc
+if [ -z $NIX_USER_CHROOT ]; then
+  NIX_USER_CHROOT=1 nix-user-chroot ~/.nix bash -l
+fi
+EOF
+```
 # Install flatpaks
 ```sh
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
