@@ -13,7 +13,7 @@ mkdir -p ~/.config/nix
 echo "experimental-features = nix-command flakes" > ~/.config/nix/nix.conf
 ```
 ```txt
-cat <<EOF>>~/.bashrc
+cat <<'EOF'>>~/.bashrc
 if [ -z $NIX_USER_CHROOT ]; then
   NIX_USER_CHROOT=1 nix-user-chroot ~/.nix bash -l
 fi
