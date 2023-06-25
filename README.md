@@ -1,4 +1,4 @@
-# Install nix
+# Install nix (not working)
 ```sh
 curl -OL https://github.com/nix-community/nix-user-chroot/releases/download/1.2.2/nix-user-chroot-bin-1.2.2-x86_64-unknown-linux-musl
 sudo install nix-user-chroot* /usr/local/bin/nix-user-chroot
