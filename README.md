@@ -19,12 +19,50 @@ if [ -z $NIX_USER_CHROOT ]; then
 fi
 EOF
 ```
+# Install nix method 2
+```sh
+sudo mkdir -p /var/nix
+sudo chown -R whs /var/nix
+```
+```txt
+# /etc/systemd/system/nix.service
+[Unit]
+Description=Create nix directory
+Before=local-fs-pre.target
+[Service]
+Type=oneshot
+ExecStartPre=chattr -i /
+ExecStart=mkdir -p /nix
+#ExecStart=chown -R whs /nix
+ExecStopPost=chattr +i /
+[Install]
+WantedBy=local-fs.target
+```
+```txt
+# /etc/systemd/system/nix.mount
+[Unit]
+Description=Mount nix
+After=local-fs.target
+After=nix.service
+[Mount]
+What=/var/nix
+Where=/nix
+Options=bind
+[Install]
+WantedBy=multi-user.target
+```
 # Install flatpaks
+https://github.com/flatpak/flatpak/issues/5452#issuecomment-1604303145
+```sh
+rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-cab8a89753
+rpm-ostree override reset -a
+```
 ```sh
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 ```sh
 flatpak install -y flathub org.filezillaproject.Filezilla
+flatpak install -y flathub org.keepassxc.KeePassXC
 ```
 # Install rpmfusion
 ```sh
