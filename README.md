@@ -1,3 +1,10 @@
+# Install borg
+https://github.com/borgbackup/borg
+```sh
+curl -OL https://github.com/borgbackup/borg/releases/download/1.2.4/borg-linux64
+sudo install borg-linux64 /usr/local/bin/borg
+rm borg-linux64
+```
 # Install nix (not working)
 ```sh
 curl -OL https://github.com/nix-community/nix-user-chroot/releases/download/1.2.2/nix-user-chroot-bin-1.2.2-x86_64-unknown-linux-musl
@@ -117,6 +124,8 @@ rm packer_*_linux_amd64.zip
 python -m ensurepip
 
 pip3 install ansible
+
+pip3 install borgmatic
 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
