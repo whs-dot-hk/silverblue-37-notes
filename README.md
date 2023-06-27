@@ -35,26 +35,14 @@ sudo chown -R whs /var/nix
 # /etc/systemd/system/nix.service
 [Unit]
 Description=Create nix directory
-Before=local-fs-pre.target
+After=local-fs.target
 [Service]
 Type=oneshot
-ExecStartPre=chattr -i /
+ExecStart=chattr -i /
 ExecStart=mkdir -p /nix
-#ExecStart=chown -R whs /nix
-ExecStopPost=chattr +i /
-[Install]
-WantedBy=local-fs.target
-```
-```txt
-# /etc/systemd/system/nix.mount
-[Unit]
-Description=Mount nix
-After=local-fs.target
-After=nix.service
-[Mount]
-What=/var/nix
-Where=/nix
-Options=bind
+ExecStart=chown -R whs /nix
+ExecStart=chattr +i /
+ExecStart=mount --bind /var/nix /nix
 [Install]
 WantedBy=multi-user.target
 ```
