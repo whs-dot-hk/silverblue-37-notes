@@ -50,7 +50,7 @@ WantedBy=multi-user.target
 https://github.com/flatpak/flatpak/issues/5452#issuecomment-1604303145
 ```sh
 rpm-ostree override replace https://bodhi.fedoraproject.org/updates/FEDORA-2023-cab8a89753
-rpm-ostree override reset -a
+rpm-ostree override reset ostree ostree-libs
 ```
 ```sh
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
