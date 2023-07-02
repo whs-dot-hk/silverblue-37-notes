@@ -50,6 +50,7 @@ WantedBy=multi-user.target
 # /etc/systemd/system/rfkill-block-all.service
 [Unit]
 Description=Airplane mode
+After=NetworkManager.service
 [Service]
 Type=oneshot
 ExecStart=rfkill block all
