@@ -47,7 +47,7 @@ ExecStart=mount --bind /var/nix /nix
 WantedBy=multi-user.target
 ```
 ```txt
-# /etc/systemd/system/rfkill-block-all.service
+# /etc/systemd/system/airplane-mode.service
 [Unit]
 Description=Airplane mode
 After=NetworkManager.service
