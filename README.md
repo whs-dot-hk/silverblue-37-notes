@@ -152,7 +152,6 @@ rpm-ostree override remove \
   libswscale-free \
   --install ffmpeg
 ```
-https://fedoraproject.org/wiki/GRUB_2#Updating_the_GRUB_configuration_file
 ```sh
 sudo grub2-mkconfig -o /etc/grub2-efi.cfg
 ```
