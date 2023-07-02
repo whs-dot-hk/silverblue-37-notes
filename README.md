@@ -67,6 +67,7 @@ rpm-ostree override reset ostree-grub2 ostree-libs ostree
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 ```sh
+flatpak install -y flathub com.gitlab.davem.ClamTk
 flatpak install -y flathub org.filezillaproject.Filezilla
 flatpak install -y flathub org.keepassxc.KeePassXC
 ```
@@ -143,4 +144,8 @@ rpm-ostree override remove \
   libswresample-free \
   libswscale-free \
   --install ffmpeg
+```
+https://fedoraproject.org/wiki/GRUB_2#Updating_the_GRUB_configuration_file
+```sh
+sudo grub2-mkconfig -o /etc/grub2-efi.cfg
 ```
