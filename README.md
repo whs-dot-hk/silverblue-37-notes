@@ -34,7 +34,7 @@ sudo chown -R whs /var/nix
 ```txt
 # /etc/systemd/system/nix.service
 [Unit]
-Description=Create nix directory
+Description=Nix
 After=local-fs.target
 [Service]
 Type=oneshot
@@ -43,6 +43,16 @@ ExecStart=mkdir -p /nix
 ExecStart=chown -R whs /nix
 ExecStart=chattr +i /
 ExecStart=mount --bind /var/nix /nix
+[Install]
+WantedBy=multi-user.target
+```
+```txt
+# /etc/systemd/system/rfkill-block-all.service
+[Unit]
+Description=Airplane mode
+[Service]
+Type=oneshot
+ExecStart=rfkill block all
 [Install]
 WantedBy=multi-user.target
 ```
