@@ -46,6 +46,9 @@ ExecStart=mount --bind /var/nix /nix
 [Install]
 WantedBy=multi-user.target
 ```
+```sh
+sudo systemctl enable nix
+```
 ```txt
 # /etc/systemd/system/airplane-mode.service
 [Unit]
@@ -56,6 +59,9 @@ Type=oneshot
 ExecStart=rfkill block all
 [Install]
 WantedBy=multi-user.target
+```
+```sh
+sudo systemctl enable airplane-mode
 ```
 # Install flatpaks
 https://github.com/flatpak/flatpak/issues/5452#issuecomment-1604303145
