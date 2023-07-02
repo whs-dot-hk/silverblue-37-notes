@@ -49,6 +49,7 @@ WantedBy=multi-user.target
 ```sh
 sudo systemctl enable nix
 ```
+# Enable airplane mode
 ```txt
 # /etc/systemd/system/airplane-mode.service
 [Unit]
