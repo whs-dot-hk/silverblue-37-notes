@@ -123,16 +123,17 @@ rpm-ostree install \
   ;
 ```
 # Install packer
+https://github.com/hashicorp/packer
 ```sh
 curl -O https://releases.hashicorp.com/packer/1.9.1/packer_1.9.1_linux_amd64.zip
 sudo unzip -d /usr/local/bin packer_*_linux_amd64.zip packer
 rm packer_*_linux_amd64.zip
 ```
+# Install borgmatic
+```sh
 python -m ensurepip
-
-pip3 install ansible
-
 pip3 install borgmatic
+```sh
 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
