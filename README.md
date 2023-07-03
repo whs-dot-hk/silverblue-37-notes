@@ -47,7 +47,11 @@ ExecStart=mount --bind /var/nix /nix
 WantedBy=multi-user.target
 ```
 ```sh
-sudo systemctl enable nix
+sudo systemctl enable --now nix
+```
+```sh
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+source ~/.bash_profile
 ```
 # Enable airplane mode
 ```txt
@@ -62,7 +66,17 @@ ExecStart=rfkill block all
 WantedBy=multi-user.target
 ```
 ```sh
-sudo systemctl enable airplane-mode
+sudo systemctl enable --now airplane-mode
+```
+```txt
+# /etc/systemd/resolved.conf
+DNS=9.9.9.9 149.112.112.112
+DNSOverTLS=yes
+DNSSEC=yes
+FallbackDNS=1.1.1.1 1.0.0.1
+```
+```sh
+sudo systemctl restart systemd-resolved
 ```
 # Install flatpaks
 https://github.com/flatpak/flatpak/issues/5452#issuecomment-1604303145
