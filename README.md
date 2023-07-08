@@ -116,13 +116,7 @@ rpm-ostree kargs \
 ```
 about:preferences#privacy > Cookies and site data > Manage exceptions
 ```txt
-https://accounts.google.com
-```
-```txt
 https://github.com
-```
-```txt
-https://www.youtube.com
 ```
 # Install virt-manager
 ```sh
